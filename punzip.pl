@@ -13,11 +13,12 @@ our $encoding_from;
 our $encoding_to;
 
 sub usage {
-  print "To compress files:\n",
-    "  punzip.pl -c=archive_name files...\n";
   print "To extract an archive:\n",
     "  punzip.pl archive_name";
-  print "Note that -p option will print all information but do not actually run."
+  print "Option -p will print all information but do not actually run.";
+  print "Option -encoding_from=<encoding> and -encoding_to=<encoding>";
+  print "  convert name of extracted files ";
+  print "  each default value of these is SJIS";
 }
 
 sub deflate {
